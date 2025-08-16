@@ -1,91 +1,112 @@
 {
-  "extensions.autoUpdate": "onlyEnabledExtensions",
-  "search.searchOnType": false,
-  // Windows
-  "window.menuBarVisibility": "compact",
-  "window.newWindowProfile": "Default",
-  // Editor
+  // Editor Core Settings
   "editor.fontSize": 14,
+  "editor.lineHeight": 22,
+  "editor.fontFamily": "'Fira Code', 'JetBrains Mono', Cascadia Code, Consolas, 'Courier New', monospace",
+  "editor.wordWrap": "on",
   "editor.tabSize": 2,
-  "editor.lineHeight": 22.652,
-  "editor.cursorSurroundingLines": 5,
-  "editor.fontFamily": "'JetBrainsMono Nerd Font Mono', Consolas, 'Courier New', monospace",
-  "editor.fontLigatures": true,
-  "editor.stickyScroll.enabled": false,
-  "editor.cursorBlinking": "solid",
-  "editor.wordSeparators": "`~!@#$%^&*()=+[{]}\\|;:'\",.<>/?",
+  "editor.inlineSuggest.enabled": true,
+  "editor.cursorSmoothCaretAnimation": "on",
+  // Performance
+  "files.exclude": {
+    "**/.svn": true,
+    "**/.hg": true,
+    "**/CVS": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/node_modules": false,
+    "**/__pycache__": true,
+    "**/*.pyc": true,
+    "**/*.log": true,
+    "**/.cache": true,
+    "**/.venv": false
+  },
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/.hg/store/**": true,
+    "**/node_modules/**": true,
+    "**/venv/**": true
+  },
+  "explorer.compactFolders": false,
+  "editor.largeFileOptimizations": true,
+  // Terminal Configuration
+  "terminal.integrated.fontSize": 14,
+  "terminal.integrated.fontFamily": "'Fira Code', 'JetBrains Mono', Cascadia Code, Consolas, 'Courier New', monospace",
+  "code-runner.runInTerminal": true,
+  // Formatting & Saving
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "breadcrumbs.enabled": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.codeActionsOnSave": {
-    "source.organizeImports": "always",
-    "source.fixAll": "always"
-  },
-  "[python]": {
-    "editor.tabSize": 4,
-    "editor.defaultFormatter": "ms-python.black-formatter"
-  },
   "[html]": {
     "editor.tabSize": 2,
     "editor.defaultFormatter": "vscode.html-language-features"
   },
-  // Files
-  "files.autoSave": "onFocusChange",
-  "files.defaultLanguage": "markdown",
-  "files.trimTrailingWhitespaceInRegexAndStrings": true,
-  "files.exclude": {
-    ".git": true,
-    "**/.git": false
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "explicit"
+    },
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true
   },
-  // Explorer
-  "explorer.excludeGitIgnore": true,
-  "explorer.autoReveal": true,
-  "explorer.confirmDelete": true,
-  "explorer.confirmDragAndDrop": false,
-  // Workbench
-  "workbench.colorTheme": "Atom One Dark",
-  "workbench.iconTheme": "material-icon-theme",
-  "workbench.editor.enablePreview": false,
-  "workbench.editor.tabSizing": "shrink",
-  "workbench.editor.tabActionCloseVisibility": false,
-  "workbench.settings.editor": "json",
-  "workbench.layoutControl.enabled": false,
-  "workbench.startupEditor": "none",
-  "workbench.tree.enableStickyScroll": false,
-  "workbench.activityBar.location": "hidden",
-  "workbench.statusBar.visible": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  // Terminal
-  "code-runner.runInTerminal": true,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-
-  // Git
+  // Language, Library, Framework Settings
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.paths": true,
+  "svelte.enable-ts-plugin": true,
+  "makefile.configureOnOpen": true,
+  // Git Integration
   "git.autofetch": true,
   "git.confirmSync": false,
-  "git.enableSmartCommit": true,
-  "git.showActionButton": {
-    "commit": false,
-    "publish": false,
-    "sync": false
+  "breadcrumbs.enabled": true,
+  "workbench.colorTheme": "One Dark Pro Night Flat",
+  "editor.stickyScroll.enabled": false,
+  // More Settings
+  "editor.linkedEditing": true,
+  "application.shellEnvironmentResolutionTimeout": 30,
+  "workbench.editorAssociations": {
+    "*.copilotmd": "vscode.markdown.preview.editor",
+    "*.sqlite3": "sqlite-viewer.view"
   },
-  // Python language
+  "explorer.fileNesting.patterns": {
+    "*.ts": "${capture}.js",
+    "*.js": "${capture}.js.map, ${capture}.min.js, ${capture}.d.ts",
+    "*.jsx": "${capture}.js",
+    "*.tsx": "${capture}.ts",
+    "tsconfig.json": "tsconfig.*.json",
+    "package.json": "package-lock.json, yarn.lock, pnpm-lock.yaml, bun.lockb",
+    "*.sqlite": "${capture}.${extname}-*",
+    "*.db": "${capture}.${extname}-*",
+    "*.sqlite3": "${capture}.${extname}-*",
+    "*.db3": "${capture}.${extname}-*",
+    "*.sdb": "${capture}.${extname}-*",
+    "*.s3db": "${capture}.${extname}-*"
+  },
+  "editor.autoClosingBrackets": "always",
   "python.analysis.completeFunctionParens": true,
-  "python.defaultInterpreterPath": "E:\\Program Files\\Languages\\Python\\Python312",
-  "settingsSync.ignoredSettings": ["-python.defaultInterpreterPath"],
-  "jupyter.allowUnauthorizedRemoteConnection": true,
-  "notebook.formatOnSave.enabled": true,
-  // JavaScript language
-  "javascript.referencesCodeLens.enabled": true,
-  // C/C++ language
-  "C_Cpp.dfault.compilerPath": "E:\\Users\\JKL\\AppData\\Local\\Programs\\C_Cpp\\bin\\g++.exe",
-  "C_Cpp.formatting": "vcFormat",
+  "python.analysis.autoImportCompletions": true,
+  "chat.commandCenter.enabled": false,
+  "window.menuBarVisibility": "compact",
+  "workbench.navigationControl.enabled": false,
+  "window.commandCenter": false,
+  "explorer.confirmDelete": false,
   "editor.minimap.enabled": false,
+  // svelte syntex highlight
+  "svelte.plugin.svelte.format.enable": true,
+  "svelte.plugin.svelte.format.config.svelteStrictMode": true,
   "codesnap.containerPadding": "0",
-  "codesnap.roundedCorners": false,
-  "codesnap.showLineNumbers": false,
   "codesnap.showWindowControls": false,
   "codesnap.target": "window",
   "codesnap.transparentBackground": true,
-  "codesnap.backgroundColor": ""
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "workbench.iconTheme": "vscode-icons",
+  "explorer.confirmDragAndDrop": false,
+  "workbench.startupEditor": "none",
+  "workbench.layoutControl.enabled": false,
+  "codium.codeCompletion.enable": true,
+  "editor.cursorBlinking": "solid",
+  "workbench.activityBar.location": "hidden",
+  "python.analysis.typeCheckingMode": "standard"
 }

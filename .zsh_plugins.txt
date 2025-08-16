@@ -1,0 +1,18 @@
+# Development Essentials
+ohmyzsh/ohmyzsh
+zsh-users/zsh-autosuggestions
+zsh-users/zsh-syntax-highlighting
+zsh-users/zsh-completions
+# path:plugins/autojump
+# junegunn/fzf
+
+# Language & Framework Plugins
+robbyrussell/oh-my-zsh path:plugins/git
+robbyrussell/oh-my-zsh path:plugins/github
+robbyrussell/oh-my-zsh path:plugins/docker
+robbyrussell/oh-my-zsh path:plugins/kubectl
+robbyrussell/oh-my-zsh path:plugins/python
+robbyrussell/oh-my-zsh path:plugins/npm
+robbyrussell/oh-my-zsh path:plugins/node
+robbyrussell/oh-my-zsh path:plugins/rust
+robbyrussell/oh-my-zsh path:plugins/vscode
